@@ -1,16 +1,14 @@
 version: '2.2'
 services:
   openwrt:
-    build:
-      context: openwrt
-      dockerfile: Dockerfile
+    build: ./
     image: dylanpowers/openwrt:15.05.1
     restart: always
     network_mode: host
     cap_add:
       - NET_ADMIN
     volumes:
-      - openwrt-config:/etc/config
+      - openwrt-config:/etc
 
 volumes:
   openwrt-config:
