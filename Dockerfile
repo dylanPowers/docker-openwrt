@@ -6,4 +6,4 @@ RUN opkg update && \
     rm -rf /var/opkg-lists/*
 
 COPY config /etc/config
-
+CMD ["/sbin/init"]
