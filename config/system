@@ -2,6 +2,13 @@ config system
   # Let docker take care of the hostname
 	# option hostname	OpenWrt
 	option timezone	UTC
+  option conloglevel 8
+  option cronloglevel 0
+  option log_file '/var/log/syslog'
+  option log_type 'file'
+  option log_size 100000  # 100 MB
+  option log_buffer_size 2048  # 2 MB
+  option log_remote '0'  # Need to turn this off to log locally.
 
 config timeserver ntp
 	list server	0.openwrt.pool.ntp.org

@@ -1,12 +1,17 @@
-version: '2.2'
+version: '2.1'
 services:
   openwrt:
     build: ./
     image: dylanpowers/openwrt:15.05.1
-    restart: always
-    network_mode: host
+    restart: unless-stopped
+    # network_mode: host  # Doesn't work
+    privileged: true
+    environment:
+      - DBGLVL=8
     cap_add:
       - NET_ADMIN
+    ports:
+      - 5000:80
     volumes:
       - openwrt-config:/etc
 
