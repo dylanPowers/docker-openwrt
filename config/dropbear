@@ -1,0 +1,3 @@
+config dropbear
+  # We don't want ssh
+  option enable 0
