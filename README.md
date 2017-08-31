@@ -1,7 +1,7 @@
 OpenWrt in Docker
 ==================
 
-(based off of nmaas87/docker-openwrt:15.05.1_x64)
+Image based off of [nmaas87/docker-openwrt:15.05.1_x64](https://github.com/nmaas87/docker-openwrt)
 
 This just adds some config tweaks and a docker-compose file to help you get
 started.
